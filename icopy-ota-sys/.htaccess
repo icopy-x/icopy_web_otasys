@@ -1,0 +1,58 @@
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php73” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php73 .php .php7 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit
+Options -Indexes  
+#禁止目录浏览 
+
+RewriteEngine On
+RewriteBase / 
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-Proto} =http
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+<FilesMatch ".(htaccess|htpasswd|ini|phps|fla|psd|log|sh)$">  
+ Order Allow,Deny  
+Deny from all  
+</FilesMatch>
+
+AddHandler cgi-script .pl .py .jsp .asp .htm .shtml .sh .cgi  
+Options -ExecCGI
+
+ErrorDocument 400 /error/400.html
+ErrorDocument 403 /error/403.html
+ErrorDocument 404 /error/404.html
+ErrorDocument 500 /error/500.html
+ErrorDocument 501 /error/501.html
+ErrorDocument 502 /error/502.html
+ErrorDocument 503 /error/503.html
+ErrorDocument 504 /error/504.html
+ErrorDocument 505 /error/505.html
+ErrorDocument 506 /error/506.html
+ErrorDocument 507 /error/507.html
+ErrorDocument 510 /error/510.html
+
+RewriteEngine On
+#proc/self/environ
+RewriteCond %{QUERY_STRING} proc/self/environ [OR]  
+# 阻止脚本企图通过URL修改mosConfig值  
+RewriteCond %{QUERY_STRING} mosConfig_[a-zA-Z_]{1,21}(=|%3D) [OR]  
+# 阻止脚本通过URL传递的base64_encode垃圾信息  
+RewriteCond %{QUERY_STRING} base64_encode.*(.*) [OR]  
+# 阻止在URL含有<script>标记的脚本  
+RewriteCond %{QUERY_STRING} (<|%3C).*script.*(>|%3E) [NC,OR]  
+# 阻止企图通过URL设置PHP的GLOBALS变量的脚本  
+RewriteCond %{QUERY_STRING} GLOBALS(=|[|%[0-9A-Z]{0,2}) [OR]  
+# 阻止企图通过URL设置PHP的_REQUEST变量的脚本  
+RewriteCond %{QUERY_STRING} _REQUEST(=|[|%[0-9A-Z]{0,2})  
+# 把所有被阻止的请求转向到403禁止提示页面！  
+RewriteRule ^(.*)$ index.php [F,L]
+
+RewriteCond % !^$ 
+RewriteRule upload/(.*).(php)$ – [F]
+# 阻止upload目录执行php
+
+RewriteRule ^upload/ - [F,L]
+RewriteRule ^changelog/ - [F,L]

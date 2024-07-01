@@ -1,0 +1,256 @@
+[
+ {
+    "id": 0,
+    "version": "1.0.90",
+    "date": "2022-08-16",
+    "item": [
+      "English:",
+      "Added Lua script function to run user-defined scripts. Users can copy the script to the U disk and run it in the device, and observe the running process and results through the device screen. And zoom size.",
+
+      "中文：",
+      "新增了LUA脚本功能，可以运行用户自定义的脚本。用户可以把脚本拷贝到U盘内，然后在设备中运行，并通过设备屏幕观察运行过程和结果。同时可以放大和缩小。"
+    ]
+  },
+ {
+    "id": 1,
+    "version": "1.0.89",
+    "date": "2022-06-09",
+    "item": [
+      "English:",
+      "Fixed a bug that prompted abnormal parameters during card simulation.",
+      "Added dump file browsing function.  After selecting a file, you can write or simulate.",
+      "Added staticnested fast decryption.  Enjoy it :)",
+
+      "中文：",
+      "修复了某些卡模拟提示参数异常的BUG。",
+      "增加了卡包列表功能，支持从卡包选择数据写卡或者模拟卡。",
+      "增加了StaticNested快速解密的支持，去享受吧。"
+    ]
+  },
+ {
+    "id": 2,
+    "version": "1.0.88",
+    "date": "2021-09-24",
+    "item": [
+      "English:",
+      "The stability of OTA is optimized.",
+      "Fixed bug that ICLASS Elite could not read.",
+      "Optimized and fixed different version of ICLASS cards write functionality compatibility.",
+
+      "中文：",
+      "优化了OTA的稳定性。",
+      "修复了部分ICLASS Elite无法读取的bug。",
+      "优化了ICLASS写卡兼容性。"
+    ]
+  },
+  {
+    "id": 3,
+    "version": "1.0.87",
+    "date": "2021-09-15",
+    "item": [
+      "English:",
+      "Fixed possible freeze when writing 14a tags.",
+      "Improvement to tag writing increasing the success rate when writing card.",
+      "Added funcitonality of writing NFC data to smartwatch and mobile phone.",
+
+      "中文：",
+      "修复写14A卡片时可能会卡死的问题。",
+      "优化了写卡的逻辑，提高写卡的成功率。",
+      "添加了自动写 手环/手表/手机 的专项写卡功能。"
+    ]
+  },
+    {
+    "id": 4,
+    "version": "1.0.86",
+    "date": "2021-09-07",
+    "item": [
+      "English:",
+      "Fixed the inconsistency between text and audio when writing 14a tag.",
+      "Fix the frozen bug at OTA.",
+      "Fine tune the system clock to improve the accuracy of the clock.",
+
+      "中文：",
+      "修复写14A卡片时，提示文本和音频不一致的问题",
+      "修复OTA可能会卡死的问题",
+      "微调系统时钟，提升时钟的精确度。"
+    ]
+  },
+    {
+    "id": 5,
+    "version": "1.0.85",
+    "date": "2021-08-25",
+    "item": [
+      "English:",
+      "Fixed the error of 0x05 when installing ipk (installation of hidden files is not allowed)",
+      "Fixed the problem that the system time goes too fast.",
+      "Fixed the problem of can't set year.",
+
+      "中文：",
+      "修复了部分用户安装IPK时一直报0x05的问题。（禁止安装隐藏文件）",
+      "修复了系统时钟走太快的问题。",
+      "修复了无法手动设置年份的问题。"
+    ]
+  },
+  {
+    "id": 6,
+    "version": "1.0.84",
+    "date": "2021-08-12",
+    "item": [
+      "English:",
+      "The 'ICS Decoder' supported.",
+      "System time set supported, the tag data file will have the correct creation time",
+      "Automatic current limit supported, (Fix compatibility issues when connecting to some laptop)",
+      "Fix the bug that connect OTG will cause the device to lag.",
+      "Fix the bug that set time.",
+
+      "中文：",
+      "ICS 外置读卡器已添加支持。",
+      "系统时间设置支持，设置后读卡数据将会有正确的创建时间",
+      "电脑模式下电流自动限制，以此解决某些笔记本电脑的兼容性问题。",
+      "修复某些情况下，插入OTG会导致设备卡顿的问题。",
+      "修复手动设置时间的一些BUG。"
+    ]
+  },
+  {
+    "id": 7,
+    "version": "1.0.83",
+    "date": "2021-07-25",
+    "item": [
+      "English:",
+      "`TERMINUS` Tag reader bug fixed.",
+      "Erase tag supported.",
+      "Check keys timeout bug fixed.",
+
+      "中文：",
+      "兼容多种容量的特斯联标签读写。",
+      "清卡功能支持已添加。",
+      "修复检测M1卡秘钥时容易超时的问题。"
+    ]
+  },
+  {
+    "id": 8,
+    "version": "1.0.82",
+    "date": "2021-07-12",
+    "item": [
+      "English:",
+      "`TERMINUS` Tag read and write supported.",
+      "The warning audio of main page disable.",
+      "Optimized for t55xx sniffing, invalid keys will now be displayed.",
+      "Fix the problem that t55xx sniff could not be forced to stop.",
+      "Simplify some English button text.",
+
+      "中文：",
+      "新增一种可复制卡，特斯联。",
+      "主页面单击电源键的报错音被禁用了。",
+      "优化T55XX嗅探，新增显示所有秘钥，包含无效秘钥，可方便调整嗅探时机。",
+      "修复T55XX嗅探无法强制结束的问题。",
+      "简化某些英文按钮文本"
+    ]
+  },
+  {
+    "id": 9,
+    "version": "1.0.81",
+    "date": "2021-07-01",
+    "item": [
+      "English:",
+      "The key is also saved when reading the M1 magic tag(gen1a).",
+      "The problem of too long countdown of M1 check keys is optimized",
+      "Solve the problem of repeated cracking of the same reader and the same keys in a region.",
+      "Add a egg, and you can find it on the about page.",
+      "中文：",
+      "在读取UID后门卡时也进行秘钥保存。",
+      "优化了M1卡检查已知秘钥时，倒计时过长的问题",
+      "现在破解成功的卡都会往用户秘钥文件里面添加，默认会进行扫描，增加了全加密解卡的成功率。",
+      "去吧，我们有个彩蛋等你搜索，在关于界面。"
+    ]
+  },
+  {
+    "id": 10,
+    "version": "1.0.8",
+    "date": "2021-06-29",
+    "item": [
+      "Some bugs fixed.",
+      "Some UI is optimized."
+    ]
+  },
+  {
+    "id": 11,
+    "version": "1.0.7",
+    "date": "2021-06-15",
+    "item": [
+      "T5577 auto sniff keys added.(Old 125k Sniff)",
+      "FDX tag simulation bug fixed.",
+      "Lf reader crash bug fixed.",
+      "Other bugs fixed..."
+    ]
+  },
+  {
+    "id": 12,
+    "version": "1.0.6",
+    "date": "2020-09-11",
+    "item": [
+      "Some bugs fixed."
+    ]
+  },
+  {
+    "id": 13,
+    "version": "1.0.5",
+    "date": "2020-05-11",
+    "item": [
+      "Sniff keys lost bug fixed.",
+      "IOprox special uid crash bug fixed.",
+      "Pyramid fc unknow crash bug fixed."
+    ]
+  },
+  {
+    "id": 14,
+    "version": "1.0.4",
+    "date": "2020-03-11",
+    "item": [
+      "iClass reader bug fixed.",
+      "Mifare reader enhanced.",
+      "PC-MODE connection dead bug fixed.",
+      "Read some tag have timer."
+    ]
+  },
+  {
+    "id": 15,
+    "version": "1.0.3",
+    "date": "2020-02-11",
+    "item": [
+      "Auto mass storage fix tool added.",
+      "Auto mass storage clear tool added",
+      "Some reader bug fixed."
+    ]
+  },
+  {
+    "id": 16,
+    "version": "1.0.2",
+    "date": "2019-12-01",
+    "item": [
+      "Added some small games(Easter egg).",
+      "Volume control implement.",
+      "Some reader bug fixed."
+    ]
+  },
+  {
+    "id": 17,
+    "version": "1.0.1",
+    "date": "2019-10-24",
+    "item": [
+      "PC-MODE implement.",
+      "Backlight implement."
+    ]
+  },
+  {
+    "id": 18,
+    "version": "1.0.0",
+    "date": "2019-09-09",
+    "item": [
+      "Tag Reader implement.",
+      "Tag Sniff implement.",
+      "Tag simulation implement.",
+      "Project rebuild."
+    ]
+  }
+]
